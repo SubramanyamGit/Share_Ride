@@ -22,43 +22,28 @@ function Sidebar() {
   const location = useLocation();
   const publicRoutes = ["/signin", "/signup"]; // Routes without sidebar
 
-  // const token = useMemo(() => localStorage.getItem("my_token"), []); // Memoize token for consistency
-
-  // const { data, isLoading, error } = useQuery({
-  //   queryKey: ["my_details"],
-  //   queryFn: fetchUserDetails,
-  //   enabled: !!token, // Fetch user details only if token exists
-  // });
 
   const userTabs = [
     { label: "Home", path: "/", icon: faHome },
     { label: "Post a Ride", path: "/post-ride", icon: faCar },
     { label: "My Rides", path: "/my-rides", icon: faTasks },
-    { label: "My Bookings", path: "/my-bookings", icon: faListAlt }, // New Tab
+    { label: "My Bookings", path: "/my-bookings", icon: faListAlt }, 
   ];
 
   const adminTabs = [
     { label: "Home", path: "/", icon: faHome },
     { label: "Manage Users", path: "/admin/users", icon: faTasks },
     { label: "Manage Rides", path: "/admin/rides", icon: faCar },
+    { label: "Post a Ride", path: "/post-ride", icon: faCar },
+    { label: "My Rides", path: "/my-rides", icon: faTasks },
+    { label: "My Bookings", path: "/my-bookings", icon: faListAlt }, 
   ];
 const tabs = localStorage.getItem("role") === 'user' ? userTabs : adminTabs
-  // const tabs = useMemo(() => {
-  //   if (data) {
-  //     return data[0].user_role === "admin" ? adminTabs : userTabs;
-  //   }
-  //   return [];
-  // }, [data]);
 
   // Check if the current route is a public route
   if (publicRoutes.includes(location.pathname)) {
     return null;
   }
-
-  // if (!token) {
-  //   // If no token exists, do not show the sidebar
-  //   return null;
-  // }
 
   return (
     <div
