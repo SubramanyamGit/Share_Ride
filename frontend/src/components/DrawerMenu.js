@@ -7,7 +7,7 @@ import { faHome, faCar, faUser, faTasks } from "@fortawesome/free-solid-svg-icon
 function DrawerMenu({ show, onClose, role }) {
   const userTabs = [
     { label: "Home", path: "/", icon: faHome },
-    { label: "Post a Ride", path: "/post-ride", icon: faCar },
+    { label: "Post Ride", path: "/post-ride", icon: faCar },
     { label: "My Rides", path: "/my-rides", icon: faTasks },
     { label: "All Rides", path: "/rides", icon: faCar },
   ];

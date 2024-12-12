@@ -54,13 +54,6 @@ function AppNavbar() {
               <div
                 className="px-3 py-2 text-dark"
                 style={{ cursor: "pointer" }}
-                onClick={() => (window.location.href = "/profile")}
-              >
-                Profile
-              </div>
-              <div
-                className="px-3 py-2 text-dark"
-                style={{ cursor: "pointer" }}
                 onClick={handleLogout}
               >
                 Logout

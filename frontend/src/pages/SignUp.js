@@ -3,14 +3,17 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate, Link } from "react-router-dom";
-import {axiosInstance} from "../hooks/axiosInstance";
+import { axiosInstance } from "../hooks/axiosInstance";
 import { toast } from "react-toastify";
 
 const SignUpSchema = Yup.object().shape({
   full_name: Yup.string().required("Full Name is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   password: Yup.string()
-    .min(6, "Password must be at least 6 characters")
+    .matches(
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/,
+      "Password must contain at least one letter, one number, one special character, and be at least 6 characters long"
+    )
     .required("Password is required"),
 });
 

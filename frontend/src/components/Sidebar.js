@@ -25,7 +25,7 @@ function Sidebar() {
 
   const userTabs = [
     { label: "Home", path: "/", icon: faHome },
-    { label: "Post a Ride", path: "/post-ride", icon: faCar },
+    { label: "Post Ride", path: "/post-ride", icon: faCar },
     { label: "My Rides", path: "/my-rides", icon: faTasks },
     { label: "My Bookings", path: "/my-bookings", icon: faListAlt }, 
   ];
@@ -34,7 +34,7 @@ function Sidebar() {
     { label: "Home", path: "/", icon: faHome },
     { label: "Manage Users", path: "/admin/users", icon: faTasks },
     { label: "Manage Rides", path: "/admin/rides", icon: faCar },
-    { label: "Post a Ride", path: "/post-ride", icon: faCar },
+    { label: "Post Ride", path: "/post-ride", icon: faCar },
     { label: "My Rides", path: "/my-rides", icon: faTasks },
     { label: "My Bookings", path: "/my-bookings", icon: faListAlt }, 
   ];

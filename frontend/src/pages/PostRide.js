@@ -77,7 +77,7 @@ function PostRide() {
 
   return (
     <Container className="mt-4">
-      <h2 className="mb-4">Post a Ride</h2>
+      <h2 className="mb-4">Post Ride</h2>
       {loading && (
         <div
           style={{
